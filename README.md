@@ -15,3 +15,7 @@ is previously loaded.
 Subscriber – This module is to analyze the Subscriber information provided and load them into the
 database in the corresponding Subscriber table with only the matching groups in the Group table and
 sub groups in the subgroup table that were previously loaded
+
+
+
+The primary objective of the project is to create a database with required data validations as mentioned. The database is in turn used for generating WELCOME_LETTER in xml format for each subscriber. 
