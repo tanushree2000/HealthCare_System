@@ -1,0 +1,15 @@
+FUNCTIONAL REQUIREMENTS:
+
+1. Rename the input file as SUBGRP_<Associate_Id>.txt. 
+
+2. Create table in sql plus by name SUBGRP_<Associate_Id> with the above structure. 
+
+3. Validate the data from the input file and load only valid records into the target table according to the constraints mentioned in the target table. 
+
+4. Populate leading zeroes in the fields GROUP_ID and SUBGRP_ID while loading into the table. 
+
+5. Also validate the Group Id against the Group table and load only matching data into the target table. 
+
+6. Load the non matching values into Target file with the same structure as source and name the file as SUBGRP_Join_Errors_<Associate_Id>.txt 
+
+7. SUBGRP_SK is the surrogate key. 
