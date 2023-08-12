@@ -1,0 +1,19 @@
+FUNCTIONAL REQUIREMENTS:
+
+1. Rename the input file as SUBSCRIBER_<Associate_Id>.csv 
+
+2. Create table in sql plus by name SUBSCRIBER_<Associate_Id> with the above structure. 
+
+3. Load only the members who are currently effective. (i.e) SYSDATE BETWEEN EFFT_DT AND TERM_DT. 
+
+4. Load subscribers with Elig_Ind as ‘Y’ in the Target table and with Elig_Ind as ‘N’ into Target file with the same structure as source and name the file as SUBSCRIBER_Errors_<Associate_Id>.txt 
+
+5. Reject records if the Subscriber_Id has less than 9 characters. 
+
+6. Populate leading zeroes in the fields GROUP_ID and SUBGRP_ID while populating data into the Target table. 
+
+7. Validate the data from the input file and load only valid records into the target table according to the constraints mentioned in the target table. 
+
+8. Also validate the Group Id and Subgrp_Id against the Subgrp table and load only matching data into the target table.  
+
+9. SUB_SK is the surrogate key. 
