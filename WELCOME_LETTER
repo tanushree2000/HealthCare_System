@@ -1,0 +1,11 @@
+FUNCTIONAL REQUIREMENTS:
+
+1. Fetch all valid records from the Group, Subgrp and Subscriber tables based on the below join conditions mentioned: 
+
+GROUP.GROUP_ID = SUBGRP.GROUP_ID 
+
+AND GROUP.GROUP_ID = SUBSCRIBER.GRP_ID 
+
+AND SUBSCRIBER.SUBGRP_ID = SUBGRP.SUBGRP_ID 
+
+2. Populate the below fields as per the data objects 
