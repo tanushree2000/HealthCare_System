@@ -1,0 +1,159 @@
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6014 : Initializing session [SUBSCRIBER] at [Tue Apr 18 15:19:07 2023].
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6683 : Repository Name: [Repo]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6684 : Server Name: [Ints]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6686 : Folder: [TanushreePoojary_2239842]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6685 : Workflow: [WRKFL_SUBSCRIBER_2239842] Run Instance Name: [] Run Id: [22]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6992 : Operating System Type [NT]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6101 : Mapping name: SUBSCRIBER_2239842 [version CheckedOut].
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6964 : Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6708 : Using configuration property [EnableDataEncryption,no]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6708 : Using configuration property [StoreHAPersistenceInDB,no]
+2023-04-18 15:19:07 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6703 : Session [SUBSCRIBER] is run by 64-bit Integration Service  [node01], version [10.5.2], build [0322].
+2023-04-18 15:19:07 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24091 : Thread [MANAGER] has the ID [1].
+2023-04-18 15:19:07 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24058 : Running Partition Group [1].
+2023-04-18 15:19:07 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24000 : Parallel Pipeline Engine initializing.
+2023-04-18 15:19:07 : INFO : (11808 | MONITOR) : (IS | Ints) : node01 : PETL_24091 : Thread [MONITOR] has the ID [2].
+2023-04-18 15:19:07 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24001 : Parallel Pipeline Engine running.
+2023-04-18 15:19:07 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24003 : Initializing session run.
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : PETL_24091 : Thread [MAPPING] has the ID [3].
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : CMN_1569 : Server Mode: [ASCII]
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : CMN_1570 : Server Code page: [MS Windows Latin 1 (ANSI), superset of Latin1]
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6151 : The session sort order is [Binary].
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : CMN_65110 : Current Timezone:[UTC +5:30]
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : CMN_65112 : Current Process ID:[11808]
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6156 : Using low precision processing.
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6180 : Deadlock retry logic will not be implemented.
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6187 : Session target-based commit interval is [10000].
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6307 : DTM error log disabled. 
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TE_7022 : TShmWriter: Initialized
+2023-04-18 15:19:07 : DEBUG : (11808 | MAPPING) : (IS | Ints) : node01 : TE_7004 : Transformation Parse Warning [TO_CHAR(TO_CHAR(LPAD(SUBGRP_ID,4,0)))]; transformation continues...
+2023-04-18 15:19:07 : DEBUG : (11808 | MAPPING) : (IS | Ints) : node01 : TE_7004 : Transformation Parse Warning [<<PM Parse Warning>> [LPAD]: operand converted to a string
+... TO_CHAR(TO_CHAR(LPAD(>>>>SUBGRP_ID<<<<,4,0)))<<PM Parse Warning>> [LPAD]: operand converted to a string
+... TO_CHAR(TO_CHAR(LPAD(SUBGRP_ID,4,>>>>0<<<<)))]; transformation continues...
+2023-04-18 15:19:07 : DEBUG : (11808 | MAPPING) : (IS | Ints) : node01 : TE_7004 : Transformation Parse Warning [TO_CHAR(LPAD(GRP_ID,8,0))]; transformation continues...
+2023-04-18 15:19:07 : DEBUG : (11808 | MAPPING) : (IS | Ints) : node01 : TE_7004 : Transformation Parse Warning [<<PM Parse Warning>> [LPAD]: operand converted to a string
+... TO_CHAR(LPAD(>>>>GRP_ID<<<<,8,0))<<PM Parse Warning>> [LPAD]: operand converted to a string
+... TO_CHAR(LPAD(GRP_ID,8,>>>>0<<<<))]; transformation continues...
+2023-04-18 15:19:07 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : DBG_21075 : Connecting to database [ORCL], Type [Oracle], User [system]
+2023-04-18 15:19:08 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6007 : DTM initialized successfully for session [SUBSCRIBER]
+2023-04-18 15:19:08 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : PETL_24033 : All DTM Connection Info: [<NONE>].
+2023-04-18 15:19:08 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24004 : PETL_24004 Starting pre-session tasks. : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | PRE-SESS) : (IS | Ints) : node01 : PETL_24091 : Thread [PRE-SESS] has the ID [4].
+2023-04-18 15:19:08 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24027 : PETL_24027 Pre-session task completed successfully. : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : PETL_24006 : Starting data movement.
+2023-04-18 15:19:08 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TT_11183 : Enabled using [1 (auto)] additional concurrent pipelines to build lookup caches. (Session likely will build or refresh [1] lookup caches; [0] on-demand only).
+2023-04-18 15:19:08 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6660 : Total Buffer Pool size is 1829472 bytes and Block size is 65536 bytes.
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1) : (IS | Ints) : node01 : PETL_24091 : Thread [LKPDP_1] has the ID [5].
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1) : (IS | Ints) : node01 : DBG_21097 : Lookup Transformation [LKPTRANS]: Default sql to create lookup cache: SELECT SUBGRP_ID,GROUP_ID FROM SUBGRP_2239842 ORDER BY SUBGRP_ID,GROUP_ID
+
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1) : (IS | Ints) : node01 : TE_7212 : Increasing [Index Cache] size for transformation [LKPTRANS] from [178956970] to [178958000].
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1) : (IS | Ints) : node01 : TE_7212 : Increasing [Data Cache] size for transformation [LKPTRANS] from [357913940] to [357916672].
+2023-04-18 15:19:08 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TT_11184 : Starting additional concurrent pipeline to build the lookup cache needed by Lookup transformation [LKPTRANS].
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1) : (IS | Ints) : node01 : TM_6660 : Total Buffer Pool size is 609824 bytes and Block size is 65536 bytes.
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : PETL_24091 : Thread [READER_1_1_1] has the ID [6].
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : DBG_21437 : Reader: Source is a file-based source.
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : PETL_24091 : Thread [LKPDP_1:READER_1_1] has the ID [7].
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : FR_3118 : source [SQ_Subscriber_Comma_2239842] code page: [MS Windows Latin 1 (ANSI), superset of Latin1]
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : FR_3071 : Maximum Line sequential buffer length is 1026.
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : BLKR_16003 : Initialization completed successfully.
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : DBG_21438 : Reader: Source is [ORCL], Type [Oracle], User [system]
+2023-04-18 15:19:08 : INFO : (11808 | TRANSF_1_1_1) : (IS | Ints) : node01 : PETL_24091 : Thread [TRANSF_1_1_1] has the ID [8].
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : PETL_24091 : Thread [WRITER_1_*_1] has the ID [9].
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8124 : Target Table Subscriber_ERRORS_2239842 :Writing output to: C:\Users\Administrator\Desktop\Project_grp2_2239842\subscriber_errors_22398421.out
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8222 : Target file [C:\Users\Administrator\Desktop\Project_grp2_2239842\subscriber_errors_22398421.out] code page: [MS Windows Latin 1 (ANSI), superset of Latin1]
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8147 : Writer: Target is Database [ORCL], Type [Oracle], User [system], Bulk Mode [OFF]
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : BLKR_16003 : Initialization completed successfully.
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : PETL_24091 : Thread [LKPDP_1:TRANSF_1_1] has the ID [10].
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : BLKR_16007 : Reader run started.
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : RR_4049 : RR_4049 SQL Query issued to database : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : RR_4050 : RR_4050 First row returned from database to reader : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:READER_1_1) : (IS | Ints) : node01 : BLKR_16008 : Reader run completed.
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : DBG_21079 : DBG_21079 Creating Lookup Cache : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : DBG_21682 : Lookup table row count : 7
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : DBG_21297 : Lookup cache row count : 7
+
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : DBG_21294 : DBG_21294 Lookup cache creation completed : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : CMN_1671 : Created new cache files PMLKUP11_10_0_22W64.[dat/idx] in directory C:\Informatica\10.5.2\server\infa_shared\Cache for Lookup [LKPTRANS].
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : DBG_21641 : LKPTRANS: Index cache size = [178958000], Data cache size = [357916672]
+2023-04-18 15:19:08 : INFO : (11808 | LKPDP_1:TRANSF_1_1) : (IS | Ints) : node01 : DBG_21216 : Finished transformations for Source Qualifier [LKPTRANS{{DSQ}}]. Total errors [0] 
+2023-04-18 15:19:08 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TT_11185 : No more lookup cache to build by additional concurrent pipeline in the current concurrent source set.
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8124 : Target Table SUBSCRIBER_2239842 :SQL INSERT statement:
+INSERT INTO SUBSCRIBER_2239842(SUB_SK,SUB_ID,LAST_NAME,FIRST_NAME,GENDER,BIRTHDATE_DT,SUBGRP_ID,GRP_ID,EFF_DT,TERM_DT,ELIG_IND)  VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8124 : Target Table SUBSCRIBER_2239842 :SQL UPDATE statement:
+UPDATE SUBSCRIBER_2239842 SET SUB_SK = ?, LAST_NAME = ?, FIRST_NAME = ?, GENDER = ?, BIRTHDATE_DT = ?, SUBGRP_ID = ?, GRP_ID = ?, EFF_DT = ?, TERM_DT = ?, ELIG_IND = ? WHERE SUB_ID = ?
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8124 : Target Table SUBSCRIBER_2239842 :SQL DELETE statement:
+DELETE FROM SUBSCRIBER_2239842 WHERE SUB_ID = ?
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8270 : Target connection group #1 consists of target(s) [Subscriber_ERRORS_2239842]
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8270 : Target connection group #2 consists of target(s) [SUBSCRIBER_2239842]
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8003 : Writer initialization complete.
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : BLKR_16007 : Reader run started.
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8005 : Writer run started.
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8158 : 
+
+*****START LOAD SESSION*****
+
+Load Start Time: Tue Apr 18 15:19:08 2023
+
+Target tables:
+
+     Subscriber_ERRORS_2239842
+     SUBSCRIBER_2239842
+
+
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : FR_3076 : Skipped over [1] lines.
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : DBG_21430 : DBG_21430 Reading data from input source file [C:\Users\Administrator\Desktop\Project_grp2_2239842\Subscriber_Comma_2239842.csv] : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : DBG_21699 : Waiting for consumer to free buffer block. Please increase the dtm buffer pool size.
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : BLKR_16019 : Read [11627] rows, read [0] error rows for source table [Subscriber_Comma_2239842] instance name [Subscriber_Comma_2239842]
+2023-04-18 15:19:08 : INFO : (11808 | READER_1_1_1) : (IS | Ints) : node01 : BLKR_16008 : Reader run completed.
+2023-04-18 15:19:08 : INFO : (11808 | TRANSF_1_1_1) : (IS | Ints) : node01 : DBG_21216 : Finished transformations for Source Qualifier [SQ_Subscriber_Comma_2239842]. Total errors [0] 
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8167 : Start loading table [Subscriber_ERRORS_2239842] at: Tue Apr 18 15:19:08 2023
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8167 : Start loading table [SUBSCRIBER_2239842] at: Tue Apr 18 15:19:08 2023
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8168 : End loading table [Subscriber_ERRORS_2239842] at: Tue Apr 18 15:19:08 2023
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8168 : End loading table [SUBSCRIBER_2239842] at: Tue Apr 18 15:19:08 2023
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8035 : Load complete time: Tue Apr 18 15:19:08 2023
+
+LOAD SUMMARY
+============
+
+WRT_8036 Target: Subscriber_ERRORS_2239842 (Instance Name: [Subscriber_ERRORS_2239842])
+WRT_8038 Inserted rows - Requested: 180        Applied: 180        Rejected: 0          Affected: 180       
+
+WRT_8036 Target: SUBSCRIBER_2239842 (Instance Name: [SUBSCRIBER_2239842])
+WRT_8044 No data loaded for this target
+
+
+
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8043 : *****END LOAD SESSION*****
+2023-04-18 15:19:08 : INFO : (11808 | WRITER_1_*_1) : (IS | Ints) : node01 : WRT_8006 : Writer run completed.
+2023-04-18 15:19:08 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24031 : 
+***** RUN INFO FOR TGT LOAD ORDER GROUP [1], CONCURRENT SET [1] *****
+Thread [READER_1_1_1] created for [the read stage] of partition point [SQ_Subscriber_Comma_2239842] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_1_1] created for [the transformation stage] of partition point [SQ_Subscriber_Comma_2239842] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [WRITER_1_*_1] created for [the write stage] of partition point [Subscriber_ERRORS_2239842, SUBSCRIBER_2239842] has completed. The total run time was insufficient for any meaningful statistics.
+
+2023-04-18 15:19:08 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : CMN_1793 : The index cache size that would hold [0] rows in the lookup table for [LKPTRANS], in memory, is [0] bytes
+2023-04-18 15:19:08 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : CMN_1792 : The data cache size that would hold [0] rows in the lookup table for [LKPTRANS], in memory, is [0] bytes
+2023-04-18 15:19:08 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24005 : PETL_24005 Starting post-session tasks. : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | POST-SESS) : (IS | Ints) : node01 : PETL_24091 : Thread [POST-SESS] has the ID [11].
+2023-04-18 15:19:08 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24029 : PETL_24029 Post-session task completed successfully. : (Tue Apr 18 15:19:08 2023)
+2023-04-18 15:19:08 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TE_7216 : Deleting cache files [PMLKUP11_10_0_22W64] for transformation [LKPTRANS].
+2023-04-18 15:19:08 : INFO : (11808 | MAPPING) : (IS | Ints) : node01 : TM_6018 : The session completed with [0] row transformation errors. 
+2023-04-18 15:19:08 : INFO : (11808 | MANAGER) : (IS | Ints) : node01 : PETL_24002 : Parallel Pipeline Engine finished.
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : PETL_24012 : Session run completed successfully.
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6022 : 
+
+SESSION LOAD SUMMARY
+================================================
+
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6252 : Source Load Summary.
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : CMN_1740 : Table: [SQ_Subscriber_Comma_2239842] (Instance Name: [SQ_Subscriber_Comma_2239842])
+	 Output Rows [11627], Affected Rows [11627], Applied Rows [11627], Rejected Rows [0]
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6253 : Target Load Summary.
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : CMN_1740 : Table: [Subscriber_ERRORS_2239842] (Instance Name: [Subscriber_ERRORS_2239842])
+	 Output Rows [180], Affected Rows [180], Applied Rows [180], Rejected Rows [0]
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : CMN_1740 : Table: [SUBSCRIBER_2239842] (Instance Name: [SUBSCRIBER_2239842])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6023 : 
+===================================================
+
+2023-04-18 15:19:09 : INFO : (11808 | DIRECTOR) : (IS | Ints) : node01 : TM_6020 : Session [SUBSCRIBER] completed at [Tue Apr 18 15:19:09 2023].
