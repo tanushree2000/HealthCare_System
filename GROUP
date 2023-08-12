@@ -1,0 +1,13 @@
+FUNCTIONAL REQUIREMENTS:
+
+1. Rename the input file as Group_Fixed_<Associate_Id>.txt and Group_Comma_<Associate_Id>.csv. 
+
+2. Create a table in sql plus by name Group_<Associate_Id>. 
+
+3. Validate the data from the input file and load only valid records into the target table according to the constraints mentioned in the target table. 
+
+4. Load only the members who are currently effective. (i.e) SYSDATE BETWEEN EFFT_DT AND TERM_DT. 
+
+5. Populate leading zeroes in GROUP_ID field while populating into the target table. 
+
+6. GRP_SK is the surrogate key
