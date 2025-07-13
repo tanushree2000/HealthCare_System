@@ -41,17 +41,7 @@ Each entity is handled in a dedicated workflow. The process ensures referential 
 
 ---
 
-## 🖼️ Architecture and Schema
 
-### Data Flow Architecture
-
-![Architecture Overview](./Screenshots/Architecture%20Overview%20of%20Data%20Flow%20Process.png)
-
-### Star Schema Model
-
-![Star Schema](./Screenshots/Star%20Schema%20Model%20for%20OptiRetail.png)
-
----
 
 ## 🧪 Sample Output
 
@@ -70,11 +60,11 @@ All sessions ran successfully under the folder `TanushreePoojary_2239842`. Each 
 
 ### Project Monitor
 
-![Project Monitor](./Screenshots/Project_monitor.PNG)
+![Project Monitor](Project_monitor.PNG)
 
 ### Workflow Monitor
 
-![Workflow Monitor](./Screenshots/Project_wf%20Monitor.PNG)
+![Workflow Monitor](./ScreenshotsProject_wf%20Monitor.PNG)
 
 ### Subgroup Workflow Monitor
 
