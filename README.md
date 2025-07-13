@@ -1,106 +1,92 @@
 
-
 # 🏥 Healthcare Enrollment ETL Workflow – Informatica PowerCenter
 
-This project demonstrates a complete **ETL workflow** for healthcare enrollment using Informatica PowerCenter. It ingests group, subgroup, and subscriber data from flat files, performs transformation and validation, loads into Oracle staging tables, and finally generates personalized XML welcome letters.
-
+This project demonstrates a complete ETL workflow for healthcare enrollment using Informatica PowerCenter. It ingests group, subgroup, and subscriber data from various flat files, applies transformations and validations, loads into Oracle staging tables, and generates XML-based welcome letters for valid subscribers.
 
 ---
 
 ## 📌 Objective
 
-To build a reliable data pipeline that:
-- Loads raw healthcare data from multiple flat file sources
-- Validates subgroup and subscriber associations
-- Stores clean data in Oracle staging tables
-- Outputs XML-based welcome letters for valid subscribers
+To build a healthcare data pipeline that:
+- Loads group, subgroup, and subscriber files from multiple formats
+- Validates foreign key integrity across entities
+- Logs rejected rows (with reasons)
+- Outputs validated data into XML welcome letters
 
 ---
 
 ## 🔁 ETL Process Flow
 
-### Step-by-step flow of data from source to output:
+Each entity is handled in a dedicated workflow. The process ensures referential integrity at each stage before generating letters.
 
-![Data Flow Architecture](./Screenshots/Architecture%20Overview%20of%20Data%20Flow%20Process.png)
+### 1. **Group Load**
+- Source: `Group_Fixed_2239842.txt`, `Group_Comma_2239842.csv`
+- Target: Oracle table `GROUP_2239842`
+- Transformation: `LPAD(GROUP_ID, 8, '0')` to standardize IDs
 
-1. **Group Load**  
-   Source: Fixed-width + comma file → `GROUP_2239842` Oracle table
+### 2. **Subgroup Load**
+- Source: `Subgrp_Tab_2239842.txt`
+- Validated using a lookup on `GROUP_ID` from the group table
+- Rejected rows logged in: `subgrp_join_errors_2239842_.txt`
+- Target: `SUBGRP_39842`
 
-2. **Subgroup Load**  
-   Source: Tab-delimited file  
-   Lookups: Validated against `GROUP_ID`  
-   Rejections: Logged in `subgrp_join_errors_2239842_.txt`
+### 3. **Subscriber Load**
+- Source: `Subscriber_Comma_2239842.csv`
+- Validated using a join on both `GRP_ID` and `SUBGRP_ID`
+- Target: Oracle table `SUBSCRIBER_2239842`
 
-3. **Subscriber Load**  
-   Source: Comma-delimited  
-   Lookups: Against `(GRP_ID, SUBGRP_ID)` pair  
-   Invalid records: Skipped
-
-4. **Letter Generation**  
-   Source: Oracle staging tables  
-   Output: Structured XML per subscriber → `LETTER_2239842.XML`
+### 4. **Welcome Letter Generation**
+- Uses a 3-way join between Group, Subgroup, and Subscriber tables
+- Output: XML letters stored in `LETTER_2239842.XML` and `W_Welcome_letter.XML`
 
 ---
 
-## 🧩 Star Schema
+## 🖼️ Architecture and Schema
 
-Your backend design follows a dimensional model structure:
+### Data Flow Architecture
+
+![Architecture Overview](./Screenshots/Architecture%20Overview%20of%20Data%20Flow%20Process.png)
+
+### Star Schema Model
 
 ![Star Schema](./Screenshots/Star%20Schema%20Model%20for%20OptiRetail.png)
 
-- **Fact Table**: Subscriber Enrollment  
-- **Dimensions**: Group, Subgroup, Time
+---
+
+## 🧪 Sample Output
+
+Final XML letter files:
+- `LETTER_2239842.XML`
+- `W_Welcome_letter.XML`
+
+Subgroups rejected due to invalid `GROUP_ID`:
+- `subgrp_join_errors_2239842_.txt`
 
 ---
 
-## ⚙️ Workflows and Mappings
+## 📋 Workflow Execution Snapshots
 
-### 1. `WRKFL_GROUP_2239842`
-- Loads data from `Group_Fixed_2239842.txt` and `Group_Comma_2239842.csv`
-- Populates `GROUP_2239842` table in Oracle
-- Includes transformation with `LPAD(GROUP_ID, 8, '0')` to standardize IDs
+All sessions ran successfully under the folder `TanushreePoojary_2239842`. Each workflow completed in under 3–4 seconds.
 
-### 2. `SUBGRP_WRKF_2239842`
-- Reads `Subgrp_Tab_2239842.txt`
-- Validates `GROUP_ID` using lookup on group table
-- Inserts valid rows into `SUBGRP_39842`
-- Logs unmatched `GROUP_ID`s in `subgrp_join_errors_2239842_.txt`
+### Project Monitor
 
-### 3. `WRKFL_SUBSCRIBER_2239842`
-- Processes `Subscriber_Comma_2239842.csv`
-- Ensures valid `(GRP_ID, SUBGRP_ID)` using joins
-- Pushes clean data to `SUBSCRIBER_2239842` table
+![Project Monitor](./Screenshots/Project_monitor.PNG)
 
-### 4. `WRKFL_LETTER_2239842`
-- Performs final 3-way join between Group, Subgroup, and Subscriber
-- Generates subscriber-level XML welcome letters
-- Output saved as `LETTER_2239842.XML` and `W_Welcome_letter.XML`
+### Workflow Monitor
+
+![Workflow Monitor](./Screenshots/Project_wf%20Monitor.PNG)
+
+### Subgroup Workflow Monitor
+
+![Subgroup Monitor](./Screenshots/subgrp_wfmonitor.PNG)
 
 ---
 
-## 🔍 Session Log Snapshots
+## ⚠️ Notes on Transformation Warnings
 
-All sessions completed **successfully**. Execution time: under 5 seconds per job.
+There were warnings during the session about `LPAD()` function operands being auto-cast to strings. These didn’t affect processing.
 
-| Workflow        | Mapping    | Status     | Time (HH:MM:SS)         |
-|-----------------|------------|------------|--------------------------|
-| WRKFL_GROUP     | GROUP      | ✅ Succeeded | 15:21:17 – 15:21:19     |
-| SUBGRP_WRKF     | SUBGRP     | ✅ Succeeded | 15:21:30 – 15:21:33     |
-| WRKFL_SUBSCRIBER| SUBSCRIBER | ✅ Succeeded | 15:21:46 – 15:21:48     |
-
-📸 Screens:
-- ![Workflow Monitor](./Screenshots/Project_wf%20Monitor.PNG)
-- ![Subgroup Monitor](./Screenshots/subgrp_wfmonitor.PNG)
-
----
-
-## 🧠 Notes on Warnings
-
-Some harmless parse warnings observed:
-- `LPAD(GRP_ID, 8, 0)` and `LPAD(SUBGRP_ID, 4, 0)` auto-cast to string
-- Didn’t affect final outputs
-
-**Fix (optional)**:
+**Best practice fix**:
 ```sql
 TO_CHAR(LPAD(TO_CHAR(GRP_ID), 8, '0'))
 ````
@@ -111,16 +97,16 @@ TO_CHAR(LPAD(TO_CHAR(GRP_ID), 8, '0'))
 
 * **Informatica PowerCenter v10.5.2**
 * **Oracle 12c**
-* Flat files (.csv, .txt)
-* XML / XSD validation
-* Windows OS
+* **Flat Files** (Fixed, Comma, Tab delimited)
+* **XML/XSD Validation**
+* **Windows OS**
 
 ---
 
 ## 👩‍💻 Author
 
 **Tanushree Poojary**
-MS in Information Management
+Master’s in Information Management
 University of Illinois Urbana-Champaign
 📫 [tp25@illinois.edu](mailto:tp25@illinois.edu)
 🔗 [LinkedIn](https://www.linkedin.com/in/tanushreep25/)
@@ -129,8 +115,5 @@ University of Illinois Urbana-Champaign
 
 ## 📁 License
 
-For academic and demo purposes only.
-
-```
-
+For academic and demonstration purposes only.
 
