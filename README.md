@@ -1,49 +1,9 @@
 
-```markdown
+
 # 🏥 Healthcare Enrollment ETL Workflow – Informatica PowerCenter
 
 This project demonstrates a complete **ETL workflow** for healthcare enrollment using Informatica PowerCenter. It ingests group, subgroup, and subscriber data from flat files, performs transformation and validation, loads into Oracle staging tables, and finally generates personalized XML welcome letters.
 
----
-
-## 📁 Folder Structure
-
-```
-
-/Healthcare\_Enrollment\_ETL/
-├── Data/
-│   ├── Group\_Comma\_2239842.csv
-│   ├── Group\_Fixed\_2239842.txt
-│   ├── Subgrp\_Tab\_2239842.txt
-│   ├── Subscriber\_Comma\_2239842.csv
-├── Workflow\_Mappings/
-│   ├── WRKF\_GROUP\_2239842.XML
-│   ├── SUBGRP\_WRKF\_2239842.XML
-│   ├── WRKFL\_SUBSCRIBER\_2239842.XML
-│   ├── WRKFL\_LETTER\_2239842.XML
-├── Output/
-│   ├── LETTER\_2239842.XML
-│   ├── W\_Welcome\_letter.XML
-├── Reference/
-│   ├── group\_details.xml
-│   ├── group\_details.1.xml / .2 / .3
-│   ├── Group\_Details.xsd
-├── Errors/
-│   ├── subgrp\_join\_errors\_2239842\_.txt
-├── Session\_Logs/
-│   ├── GROUP\_log.txt
-│   ├── SUBGRP\_log.txt
-│   ├── SUBSCRIBER\_log.txt
-│   ├── welcome\_letter\_log.txt
-├── Screenshots/
-│   ├── Architecture Overview of Data Flow Process.png
-│   ├── Star Schema Model for OptiRetail.png
-│   ├── Project\_monitor.PNG
-│   ├── Project\_wf Monitor.PNG
-│   ├── subgrp\_wfmonitor.PNG
-└── README.md
-
-````
 
 ---
 
@@ -173,7 +133,4 @@ For academic and demo purposes only.
 
 ```
 
----
 
-Paste this directly into your `README.md` on GitHub. Make sure to place your PNG images in a `/Screenshots/` folder and name them exactly as referenced. Let me know if you want a live demo GIF or a badge section.
-```
