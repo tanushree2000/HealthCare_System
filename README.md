@@ -56,7 +56,7 @@ Subgroups rejected due to invalid `GROUP_ID`:
 
 ## 📋 Workflow Execution Snapshots
 
-All sessions ran successfully under the folder `TanushreePoojary_2239842`. Each workflow completed in under 3–4 seconds.
+All sessions ran successfully. Each workflow completed in under 3–4 seconds.
 
 ### Project Monitor
 
@@ -64,11 +64,11 @@ All sessions ran successfully under the folder `TanushreePoojary_2239842`. Each 
 
 ### Workflow Monitor
 
-![Workflow Monitor](./ScreenshotsProject_wf%20Monitor.PNG)
+![Workflow Monitor](Project_wf%20Monitor.PNG)
 
 ### Subgroup Workflow Monitor
 
-![Subgroup Monitor](./Screenshots/subgrp_wfmonitor.PNG)
+![Subgroup Monitor](subgrp_wfmonitor.PNG)
 
 ---
 
